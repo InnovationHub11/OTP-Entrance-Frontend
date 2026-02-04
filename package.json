@@ -39,6 +39,6 @@
     "@angular/compiler-cli": "^21.1.0",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
-    "vitest": "^2.1.9"
+    "vitest": "^4.0.18"
   }
 }

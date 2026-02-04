@@ -10,17 +10,14 @@ jobs:
   build:
     name: Build Frontend
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [22.x, 20.x]
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 22.x
 
       - name: Install dependencies
         run: npm install
@@ -31,10 +28,13 @@ jobs:
       - name: Copy _redirects file
         run: cp public/_redirects dist/otp-entrance-frontend/browser/_redirects
 
+      - name: Verify _redirects exists
+        run: test -f dist/otp-entrance-frontend/browser/_redirects && echo "_redirects found"
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: frontend-dist-${{ matrix.node-version }}
+          name: frontend-dist
           path: dist/otp-entrance-frontend/browser
 
   deploy:
@@ -44,8 +44,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          # Download the artifact from Node 22.x build only
-          name: frontend-dist-22.x
+          name: frontend-dist
           path: dist/otp-entrance-frontend/browser
 
       - name: Deploy to Netlify

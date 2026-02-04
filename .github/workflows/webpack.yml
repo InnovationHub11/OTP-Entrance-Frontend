@@ -29,13 +29,13 @@ jobs:
         run: npm run build
 
       - name: Copy _redirects file
-        run: cp public/_redirects dist/otp-entrance-frontend/_redirects
+        run: cp public/_redirects dist/otp-entrance-frontend/browser/_redirects
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: frontend-dist-${{ matrix.node-version }}
-          path: dist/otp-entrance-frontend
+          path: dist/otp-entrance-frontend/browser
 
   deploy:
     name: Deploy to Netlify
@@ -46,12 +46,12 @@ jobs:
         with:
           # Download the artifact from Node 22.x build only
           name: frontend-dist-22.x
-          path: dist/otp-entrance-frontend
+          path: dist/otp-entrance-frontend/browser
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: dist/otp-entrance-frontend
+          publish-dir: dist/otp-entrance-frontend/browser
           production-deploy: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}

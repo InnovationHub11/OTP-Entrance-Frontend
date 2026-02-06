@@ -4,4 +4,31 @@ h2 {
 
 form {
   border-top: 4px solid #006699;
+  padding-top: 15px; /* optional: adds space inside the form */
+}
+
+select {
+  margin-bottom: 20px; /* space between role dropdown and button */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #006699;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004466;
+}
+
+.snackbar-success {
+  background-color: #2e7d32; /* green */
+  color: #fff;
+}
+
+.snackbar-error {
+  background-color: #c62828; /* red */
+  color: #fff;
 }

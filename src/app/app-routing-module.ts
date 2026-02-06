@@ -7,9 +7,9 @@ import {Home} from './features/home/home';
 
 const routes: Routes = [
   { path: 'signup', component: Signup },
-  { path: 'signin', component: Signin },
+  { path: 'signing', component: Signin },
   { path: 'home', component: Home },
-  { path: '', redirectTo: '/signin', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 

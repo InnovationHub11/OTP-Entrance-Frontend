@@ -8,3 +8,13 @@ p {
   font-size: 18px;
   color: #555;
 }
+.bg-container {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('/assets/images/gadla.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+

@@ -1,9 +1,12 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Home } from './features/home/home';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -12,7 +15,11 @@ import { Home } from './features/home/home';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    MatSnackBarModule,
+    CommonModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

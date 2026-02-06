@@ -1,10 +1,30 @@
 <h2>Sign Up</h2>
-<form>
-  <input placeholder="Initials and Surname" />
-  <input placeholder="Registration Number" />
-  <input placeholder="ID Number" />
-  <input type="password" placeholder="Create Password" />
-  <input type="password" placeholder="Confirm Password" />
+<form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+  <label for="name">Initials and Surname</label>
+  <input type="text" id="name" name="name" [(ngModel)]="formData.name" placeholder="Initials and Surname" required />
+
+  <label for="regNumber">Registration Number</label>
+  <input type="text" id="regNumber" name="regNumber" [(ngModel)]="formData.regNumber" placeholder="Registration Number" required />
+
+  <label for="idNumber">ID Number</label>
+  <input type="text" id="idNumber" name="idNumber" [(ngModel)]="formData.idNumber" placeholder="ID Number" required minlength="13" />
+
+  <label for="password">Create Password</label>
+  <input type="password" id="password" name="password" [(ngModel)]="formData.password" placeholder="Create Password" required minlength="8" />
+
+  <label for="confirmPassword">Confirm Password</label>
+  <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="formData.confirmPassword" placeholder="Confirm Password" required />
+
+  <label for="role">Role</label>
+  <select id="role" name="role" [(ngModel)]="formData.role" required>
+    <option value="">-- Select Role --</option>
+    <option value="security">Security</option>
+    <option value="officials">Officials</option>
+  </select>
+
   <button type="submit">SIGN UP</button>
 </form>
-<a href="signin">Already have an account? Sign In</a>
+
+<p>{{ message }}</p>
+
+<a href="/signing">Already have an account? Sign In</a>

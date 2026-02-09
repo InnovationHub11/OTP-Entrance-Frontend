@@ -13,9 +13,14 @@ export class AuthService {
   login(idNumber: number | string, password: string): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.apiUrl}/login`, { idNumber, password });
   }
-
 }
 export interface LoginResponse {
   success: boolean;
   message: string;
+  role: string;
+  name: string;
+  surname: string;
+  regNumber: string;
+  qrCode: string;
 }
+

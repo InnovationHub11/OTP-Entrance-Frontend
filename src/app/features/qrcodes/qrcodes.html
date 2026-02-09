@@ -1,0 +1,10 @@
+<div class="qr-container" *ngIf="userData?.success">
+  <h2>Welcome {{ userData.name }}</h2>
+  <p>Registration Number: {{ userData.regNumber }}</p>
+  <p>Role: {{ userData.role }}</p>
+
+  <div *ngIf="qrCodeUrl">
+    <h3>Your QR Code:</h3>
+    <img [src]="qrCodeUrl" alt="User QR Code" />
+  </div>
+</div>

@@ -38,7 +38,11 @@ export class Signin {
             duration: 8000,
             panelClass: ['snackbar-success']
           });
-          this.router.navigate(['/home']);
+
+
+          localStorage.setItem('userData', JSON.stringify(res));
+
+          this.router.navigate(['/QR']);
         } else {
           this.snackBar.open(res.message || 'Login failed', 'Close', {
             duration: 8000,
@@ -54,4 +58,5 @@ export class Signin {
       }
     });
   }
+
 }

@@ -7,11 +7,13 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {CommonModule} from '@angular/common';
+import { Qrcodes } from './features/qrcodes/qrcodes';
 
 @NgModule({
   declarations: [
     App,
     Home,
+    Qrcodes,
   ],
   imports: [
     BrowserModule,

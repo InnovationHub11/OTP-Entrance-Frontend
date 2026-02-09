@@ -3,13 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import {Signup} from './features/signup/signup';
 import {Signin} from './features/signin/signin';
 import {Home} from './features/home/home';
+import {Qrcodes} from './features/qrcodes/qrcodes';
 
 
 const routes: Routes = [
   { path: 'signup', component: Signup },
   { path: 'signing', component: Signin },
   { path: 'home', component: Home },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  {path: 'QR',component:Qrcodes}
+,  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 

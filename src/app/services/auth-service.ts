@@ -10,7 +10,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  login(idNumber: number | string, password: string): Observable<LoginResponse> {
+  login(idNumber: string, password: string): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.apiUrl}/login`, { idNumber, password });
   }
 
@@ -19,6 +19,13 @@ export class AuthService {
     localStorage.removeItem("idNumber");
     localStorage.removeItem("regNumber");
     localStorage.removeItem("qrCode");
+  }
+
+  forgotPassword(idNumber: string, newPassword: string) {
+    return this.http.put<{
+      success: boolean; message: string }>( `${this.apiUrl}/forgot-password`,
+      { idNumber, newPassword
+      } );
   }
 
 }

@@ -8,12 +8,14 @@ import {HttpClientModule} from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {CommonModule} from '@angular/common';
 import { Qrcodes } from './features/qrcodes/qrcodes';
+import { ForgotPassword } from './forgot-password/forgot-password';
 
 @NgModule({
   declarations: [
     App,
     Home,
     Qrcodes,
+    ForgotPassword,
   ],
   imports: [
     BrowserModule,

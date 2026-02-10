@@ -13,7 +13,7 @@ import {FormsModule} from '@angular/forms';
   styleUrls: ['./signin.css']
 })
 export class Signin {
-  idNumber: number | null = null;
+  idNumber: string | null = null;
   password: string = '';
 
   constructor(

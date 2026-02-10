@@ -2,7 +2,7 @@
 <form (ngSubmit)="onSubmit()" #signinForm="ngForm" novalidate>
   <label for="idNumber">ID Number</label>
   <input
-    type="number"
+    type="text"
     id="idNumber"
     name="idNumber"
     [(ngModel)]="idNumber"
@@ -33,5 +33,5 @@
 
 <div class="links">
   <a href="/signup">Register new account! Sign Up</a> |
-  <a routerLink="/forgot-password">Forgot Password?</a>
+  <a href="/forgot-password">Forgot Password?</a>
 </div>

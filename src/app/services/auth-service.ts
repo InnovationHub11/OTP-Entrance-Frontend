@@ -28,6 +28,13 @@ export class AuthService {
       } );
   }
 
+  verifyQr(regNumber: string) {
+    return this.http.post<{ success: boolean; message: string }>(
+      'http://localhost:8080/api/otp/scan-verify',
+      { regNumber }
+    );
+  }
+
 }
 export interface LoginResponse {
   success: boolean;

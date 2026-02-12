@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { User, UserService } from '../../services/user-service';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import {User, UserService} from '../../services/user-service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.html',       // matches file name
-  styleUrls: ['./signup.css'],        // matches file name
-  standalone: true,
-  imports: [FormsModule]
+  selector: 'app-register',
+  standalone: false,
+  templateUrl: './register.html',
+  styleUrl: './register.css',
 })
-export class Signup {
+export class Register {
+
   formData: User & { confirmPassword: string } = {
     idNumber: 0,
     name: '',
@@ -25,7 +24,8 @@ export class Signup {
 
   constructor(private userService: UserService,
               private snackBar: MatSnackBar,
-              private router:Router) {}
+              private router: Router) {
+  }
 
   onSubmit(): void {
     if (this.formData.password !== this.formData.confirmPassword) {
@@ -62,5 +62,4 @@ export class Signup {
       }
     });
   }
-
 }

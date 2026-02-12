@@ -9,8 +9,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {CommonModule} from '@angular/common';
 import { Qrcodes } from './features/qrcodes/qrcodes';
 import { ForgotPassword } from './forgot-password/forgot-password';
-import { Admin } from './features/admin/admin';
-import {AddAdmin } from './features/add-admin/add-admin';
 
 @NgModule({
   declarations: [
@@ -18,8 +16,6 @@ import {AddAdmin } from './features/add-admin/add-admin';
     Home,
     Qrcodes,
     ForgotPassword,
-    Admin,
-    AddAdmin,
   ],
   imports: [
     BrowserModule,

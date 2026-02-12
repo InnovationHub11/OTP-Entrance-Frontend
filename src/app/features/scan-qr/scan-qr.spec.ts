@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Signup } from './signup';
+import { ScanQR } from './scan-qr';
 
-describe('Signup', () => {
-  let component: Signup;
-  let fixture: ComponentFixture<Signup>;
+describe('ScanQR', () => {
+  let component: ScanQR;
+  let fixture: ComponentFixture<ScanQR>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Signup]
+      declarations: [ScanQR]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Signup);
+    fixture = TestBed.createComponent(ScanQR);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

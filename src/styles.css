@@ -4,7 +4,7 @@ body {
   padding: 0;
   color: #28a745;
 
-  background: url('assets/images/gadla.jpeg') no-repeat center center fixed;
+  background: url('/assets/images/gadla.jpeg') no-repeat center center fixed;
   background-size: cover;
 }
 

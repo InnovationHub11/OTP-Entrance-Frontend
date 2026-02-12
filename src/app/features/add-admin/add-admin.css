@@ -1,0 +1,45 @@
+.add-admin-card h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #28a745;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.add-admin-card form {
+  border-top: 4px solid #009966;
+  padding-top: 20px;
+}
+
+.add-admin-card label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #28a745;  /* light green */
+}
+
+.add-admin-card input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.add-admin-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.add-admin-card button:hover {
+  background-color: #218838;
+}
+

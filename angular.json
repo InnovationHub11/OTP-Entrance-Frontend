@@ -36,8 +36,7 @@
                 "input": "public",
                 "output": "."
               }
-            ]
-          ,
+            ],
             "styles": [
               "src/material-theme.scss",
               "src/styles.css"

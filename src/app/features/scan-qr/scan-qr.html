@@ -1,0 +1,8 @@
+<h2>Scan User QR Code</h2>
+
+<zxing-scanner
+  (scanSuccess)="onScanSuccess($event)"
+  [formats]="allowedFormats"
+></zxing-scanner>
+
+<p *ngIf="scannedRegNumber">Scanned: {{ scannedRegNumber }}</p>

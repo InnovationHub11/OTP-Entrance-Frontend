@@ -1,0 +1,28 @@
+.snackbar-success {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.snackbar-error {
+  background-color: #f44336;
+  color: #fff;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.snackbar-success {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.snackbar-error {
+  background-color: #f44336;
+  color: #fff;
+}
+

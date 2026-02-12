@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {Signup} from './features/signup/signup';
-import {Signin} from './features/signin/signin';
 import {Home} from './features/home/home';
 import {Qrcodes} from './features/qrcodes/qrcodes';
 import {ForgotPassword} from './forgot-password/forgot-password';
-
+import {ScanQR} from './features/scan-qr/scan-qr';
+import {LogIn} from './features/log-in/log-in';
+import {Register} from './features/register/register';
 
 const routes: Routes = [
-  { path: 'signup', component: Signup },
-  { path: 'signing', component: Signin },
+  { path: 'register', component: Register },
+  { path: 'login', component: LogIn },
+  { path: 'scan', component: ScanQR },
   { path: 'home', component: Home },
   {path: 'userProfile',component:Qrcodes},
   {path: 'forgot-password',component:ForgotPassword}

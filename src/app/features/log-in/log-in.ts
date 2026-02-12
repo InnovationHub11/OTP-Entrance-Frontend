@@ -1,18 +1,16 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { AuthService, LoginResponse } from '../../services/auth-service';
-import {FormsModule} from '@angular/forms';
+import {AuthService, LoginResponse} from '../../services/auth-service';
+import {Router} from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
-  selector: 'app-signin',
-  templateUrl: './signin.html',
-  imports: [
-    FormsModule
-  ],
-  styleUrls: ['./signin.css']
+  selector: 'app-log-in',
+  standalone: false,
+  templateUrl: './log-in.html',
+  styleUrl: './log-in.css',
 })
-export class Signin {
+export class LogIn {
+
   idNumber: string | null = null;
   password: string = '';
 
@@ -58,5 +56,4 @@ export class Signin {
       }
     });
   }
-
 }

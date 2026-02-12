@@ -1,14 +1,18 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Home } from './features/home/home';
-import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import {CommonModule} from '@angular/common';
 import { Qrcodes } from './features/qrcodes/qrcodes';
 import { ForgotPassword } from './forgot-password/forgot-password';
+import { ScanQR } from './features/scan-qr/scan-qr';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { LogIn } from './features/log-in/log-in';
+import { Register } from './features/register/register';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +20,9 @@ import { ForgotPassword } from './forgot-password/forgot-password';
     Home,
     Qrcodes,
     ForgotPassword,
+    ScanQR,
+    LogIn,
+    Register
   ],
   imports: [
     BrowserModule,
@@ -23,11 +30,10 @@ import { ForgotPassword } from './forgot-password/forgot-password';
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    CommonModule
+    ZXingScannerModule
+
   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-  ],
+  providers: [],
   bootstrap: [App]
 })
 export class AppModule { }

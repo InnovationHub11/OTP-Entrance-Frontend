@@ -76,6 +76,6 @@ export class Qrcodes implements OnInit {
 
   signOut() {
     this.authService.logout();
-     this.router.navigate(['/signing']);
+     this.router.navigate(['/login']);
   }
 }
